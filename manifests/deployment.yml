@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: paulyukpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: paulyukpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: paulyukpipelinesjavascriptdocker 
+          image: pyacr.azurecr.io/paulyukpipelinesjavascriptdocker 
+          ports:
+          - containerPort: 8080
